@@ -34,6 +34,7 @@ class MarvelService {
 		// 	str = 'Description is not available for this character'
 		// }
 		return {
+			id: char.id,
 			name: char.name,
 			description: char.description ? char.description.length > 200 ? char.description.slice (0, 200) +"..." :  char.description:  'Description is not available for this character',
 			thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
