@@ -13,8 +13,6 @@ class CharInfo extends Component {
 		loading: false,
 		error: false
 	}
-
-
 	marvelService = new MarvelService();
 
 	componentDidMount() {
@@ -49,7 +47,7 @@ class CharInfo extends Component {
 		});
 	}
 
-	onCharLoading = (char) => {
+	onCharLoading = () => {
 		this.setState({
 			loading: true
 		})
@@ -88,6 +86,8 @@ const View = ({char}) => {
 	};
 	if(thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg') {
 		imgStyle = {'objectFit' : 'unset', 'height': '100%'};
+	} else if (thumbnail.indexOf('.gif') > -1) {
+		imgStyle = {'objectFit' : 'contain'};
 	}
 
 	let comicsSliced =  comics.length > 10 ? comics.slice(0, 10) : comics;

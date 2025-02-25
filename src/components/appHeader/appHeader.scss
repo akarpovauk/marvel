@@ -2,8 +2,13 @@
 
 .app {
     &__header {
+		position: sticky;
+		top: 0px;
+		padding-top: 50px;
         display: flex;
         justify-content: space-between;
+		z-index: 110;
+		background-color: white;
     }
     &__title {
         font-weight: bold;

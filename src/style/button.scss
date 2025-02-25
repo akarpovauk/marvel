@@ -10,6 +10,9 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+	&:disabled {
+		filter: grayscale(.5);
+	}
     &__long {
         display: block;
         width: 170px;
