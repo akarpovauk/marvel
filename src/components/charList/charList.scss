@@ -28,10 +28,14 @@
             object-fit: cover;
             transform: translate(-15px, -15px);
         }
+		&:hover {
+			box-shadow: 0 5px 20px $dark;
+		}
         &_selected {
-            box-shadow: 0 5px 20px $main-color;
+            box-shadow: 0 5px 20px $main-color!important;
             transform: translateY(-8px);
         }
+
     }
     &__name {
         font-weight: bold;
