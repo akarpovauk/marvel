@@ -1,7 +1,10 @@
 class MarvelService {
-	_apiBase = 'https://gateway.marvel.com:443/v1/public/';
-	_apikey = 'apikey=10877f709e567804be49abd6a4c6cbcd';
-	_baseOffset = 210;
+	// _apiBase = 'https://gateway.marvel.com:443/v1/public/';
+	// _apikey = 'apikey=10877f709e567804be49abd6a4c6cbcd';
+	// _baseOffset = 210;
+	_apiBase = 'https://marvel-server-zeta.vercel.app/';
+	_apikey = 'd4eecb0c66dedbfae4eab45d312fc1df';
+	_baseOffset = 0;
 
 	getResource = async (url) => {
 		let res = await fetch(url);
@@ -14,7 +17,8 @@ class MarvelService {
 
 	getAllCharacters = async(offset = this._baseOffset) => {
 		const res = await this.getResource(
-			`${this._apiBase}characters?limit=9&offset=${offset}&${this._apikey}`
+			// `${this._apiBase}characters?limit=9&offset=${offset}&${this._apikey}`
+			`${this._apiBase}characters?limit=9&${this._apikey}`
 		);
 		return res.data.results.map(this._transformCharacter);
 	}
