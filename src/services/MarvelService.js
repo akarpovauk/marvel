@@ -3,7 +3,7 @@ class MarvelService {
 	// _apikey = 'apikey=10877f709e567804be49abd6a4c6cbcd';
 	// _baseOffset = 210;
 	_apiBase = 'https://marvel-server-zeta.vercel.app/';
-	_apikey = 'd4eecb0c66dedbfae4eab45d312fc1df';
+	_apikey = 'apikey=d4eecb0c66dedbfae4eab45d312fc1df';
 	_baseOffset = 0;
 
 	getResource = async (url) => {
